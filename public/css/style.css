@@ -791,6 +791,13 @@ button {
   font-style: italic;
 }
 
+@media (min-width: 768px){
+  #ageView p{
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+
 #ageView span{
   margin-right: 1.25rem;
   --tw-text-opacity: 1;

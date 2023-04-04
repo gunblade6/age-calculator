@@ -98,7 +98,7 @@ button {
   @apply flex flex-col;
 }
 #ageView p {
-  @apply font-extrabold italic text-5xl;
+  @apply font-extrabold italic text-5xl md:text-6xl;
 }
 #ageView span {
   @apply text-primary-100 mr-5;
