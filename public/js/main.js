@@ -97,9 +97,27 @@ function collectData(day, month, year) {
 
 function showData() {
   collectData(dayInput.value, monthInput.value, yearInput.value);
-  dayOutput.innerHTML = dayValue;
-  monthOutput.innerHTML = monthValue;
-  yearOutput.innerHTML = yearValue;
+  dayOutput.innerHTML = 0;
+  monthOutput.innerHTML = 0;
+  yearOutput.innerHTML = 0;
+  let daysUp = setInterval(() => {
+    dayOutput.innerHTML++;
+    if (dayOutput.innerHTML == dayValue) {
+      clearInterval(daysUp);
+    }
+  }, 30);
+  let monthUp = setInterval(() => {
+    monthOutput.innerHTML++;
+    if (monthOutput.innerHTML == monthValue) {
+      clearInterval(monthUp);
+    }
+  }, 30);
+  let yearUp = setInterval(() => {
+    yearOutput.innerHTML++;
+    if (yearOutput.innerHTML == yearValue) {
+      clearInterval(yearUp);
+    }
+  }, 30);
 }
 function showDefaultData() {
   dayOutput.innerHTML = "- -";
