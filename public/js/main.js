@@ -24,13 +24,23 @@ let valid = "false";
 
 btn.addEventListener("click", (e) => {
   e.stopPropagation();
+  startOperation();
+});
+
+window.addEventListener("keyup", (e) => {
+  if (e.code === "Enter") {
+    startOperation();
+  }
+});
+
+function startOperation() {
   checkForError(document.querySelectorAll("input"));
   if (valid === "true") {
     showData();
   } else {
     showDefaultData();
   }
-});
+}
 
 function checkForError(inputs) {
   for (let i = 0; i < inputs.length; i++) {
@@ -102,19 +112,19 @@ function showData() {
   yearOutput.innerHTML = 0;
   let daysUp = setInterval(() => {
     dayOutput.innerHTML++;
-    if (dayOutput.innerHTML == dayValue) {
+    if (dayOutput.innerHTML >= dayValue) {
       clearInterval(daysUp);
     }
   }, 30);
   let monthUp = setInterval(() => {
     monthOutput.innerHTML++;
-    if (monthOutput.innerHTML == monthValue) {
+    if (monthOutput.innerHTML >= monthValue) {
       clearInterval(monthUp);
     }
   }, 30);
   let yearUp = setInterval(() => {
     yearOutput.innerHTML++;
-    if (yearOutput.innerHTML == yearValue) {
+    if (yearOutput.innerHTML >= yearValue) {
       clearInterval(yearUp);
     }
   }, 30);
