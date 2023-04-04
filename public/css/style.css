@@ -518,8 +518,20 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.min-h-screen{
+  min-height: 100vh;
+}
+
+.w-full{
+  width: 100%;
+}
+
 .font-poppins{
   font-family: Poppins, sans-serif;
+}
+
+.text-primary{
+  font-size: 36px;
 }
 
 .attribution {
