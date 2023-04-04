@@ -5,9 +5,101 @@
 @tailwind utilities;
 
 .attribution {
-  font-size: 11px;
+  font-size: 12px;
   text-align: center;
+  position: absolute;
+  bottom: -29px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  background-color: white;
+  width: 100%;
+  padding: 20px 0;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+article {
+  border-bottom-right-radius: 5rem !important;
+  @apply max-w-xl mx-auto;
+}
+#inputFields > div {
+  @apply flex flex-col gap-1;
+}
+#inputFields > div span {
+  @apply text-xs uppercase text-secondary-400 tracking-widest font-bold;
+}
+#inputFields > div input {
+  @apply focus:outline-none border border-solid border-secondary-300
+   w-20 h-12 rounded-md px-3 font-bold text-base  m-0 focus:border-primary-100
+   md:w-32 md:text-xl md:h-14;
+}
+#inputFields > div.error span,
+#inputFields > div.empty span {
+  @apply text-primary-200;
+}
+#inputFields > div.error input,
+#inputFields > div.empty input {
+  @apply border-primary-200;
+}
+#inputFields > div.error,
+#inputFields > div.empty {
+  @apply relative;
+}
+#inputFields > div.error::after,
+#inputFields > div.empty::after {
+  font-size: 7px;
+  @apply block w-full absolute left-0 -bottom-5 text-primary-200;
+}
+.whole div.error::after,
+.whole div.error::after {
+  content: "" !important;
+}
+.whole div:first-child::after {
+  content: "Must be a valid date" !important;
+}
+@media screen and (min-width: 768px) {
+  #inputFields > div.error::after,
+  #inputFields > div.empty::after {
+    font-size: 10px;
+  }
+}
+#inputFields > div.error::after {
+  content: attr(data-error);
+}
+#inputFields > div.empty::after {
+  content: "This field is required";
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+  @apply hover:bg-secondary-500;
+  transition: 300ms;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -ms-transition: 300ms;
+  -o-transition: 300ms;
+}
+#buttonHolder::before {
+  content: "";
+  @apply bg-secondary-300 absolute top-1/2 left-0 w-full h-px;
+}
+
+#ageView {
+  @apply flex flex-col;
+}
+#ageView p {
+  @apply font-extrabold italic text-5xl;
+}
+#ageView span {
+  @apply text-primary-100 mr-5;
 }

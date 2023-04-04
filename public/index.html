@@ -16,15 +16,54 @@
     <title>Frontend Mentor | Age calculator app</title>
   </head>
   <body class="font-poppins text-primary">
-    <main class="w-full min-h-screen">hello</main>
-    <!-- Day DD Month MM Year YYYY -- years -- months -- days -->
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by
-      <a href="https://mohamed-dev.netlify.app/" target="_blank">Mohamed</a>.
-    </div>
+    <main class="w-full min-h-screen bg-secondary-200 grid items-center px-5">
+      <article class="bg-secondary-100 flex flex-col px-5 py-10 rounded-3xl">
+        <div
+          id="inputFields"
+          class="md:justify-start md:gap-5 flex items-center justify-between"
+        >
+          <div id="dayHolder" data-error="Must be a valid day">
+            <span>day</span>
+            <input type="number" name="day" id="day" placeholder="DD" />
+          </div>
+          <div id="monthHolder" data-error="Must be a valid month">
+            <span>month</span>
+            <input type="number" name="month" id="month" placeholder="MM" />
+          </div>
+          <div id="yearHolder" data-error="Must be in the past">
+            <span>year</span>
+            <input type="number" name="year" id="year" placeholder="YYYY" />
+          </div>
+        </div>
+        <div
+          id="buttonHolder"
+          class="justify-center md:justify-end relative w-full flex items-center"
+        >
+          <button
+            class="bg-primary-100 my-10 mb-8 w-fit p-4 rounded-full z-20"
+            id="mainButton"
+          >
+            <img
+              src="./assets/images/icon-arrow.svg"
+              class="w-6"
+              alt="start button"
+            />
+          </button>
+        </div>
+        <div id="ageView">
+          <p><span id="yearView">- -</span>years</p>
+          <p><span id="monthsView">- -</span>months</p>
+          <p><span id="daysView">- -</span>days</p>
+        </div>
+      </article>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded with ☕ by
+        <a href="https://mohamed-dev.netlify.app/" target="_blank">Mohamed</a>.
+      </div>
+    </main>
+    <script src="./js/main.js"></script>
   </body>
 </html>
