@@ -621,6 +621,12 @@ video {
   font-size: 36px;
 }
 
+* {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
 .attribution {
   font-size: 12px;
   text-align: center;
