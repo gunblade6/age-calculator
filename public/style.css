@@ -551,10 +551,6 @@ video {
   width: 1.5rem;
 }
 
-.w-96{
-  width: 24rem;
-}
-
 .w-fit{
   width: -moz-fit-content;
   width: fit-content;
@@ -654,7 +650,7 @@ video {
 article{
   margin-left: auto;
   margin-right: auto;
-  border-bottom-right-radius: 8rem !important;
+  border-bottom-right-radius: 8rem;
 }
 
 #inputFields > div{

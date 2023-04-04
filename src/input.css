@@ -28,7 +28,7 @@
 
 article {
   @apply mx-auto;
-  border-bottom-right-radius: 8rem !important;
+  border-bottom-right-radius: 8rem;
 }
 #inputFields > div {
   @apply flex flex-col gap-1;
