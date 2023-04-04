@@ -27,8 +27,8 @@
 }
 
 article {
-  border-bottom-right-radius: 5rem !important;
-  @apply max-w-xl mx-auto;
+  @apply mx-auto;
+  border-bottom-right-radius: 8rem !important;
 }
 #inputFields > div {
   @apply flex flex-col gap-1;
@@ -78,12 +78,6 @@ article {
   content: "This field is required";
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
 button {
   @apply hover:bg-secondary-500;
   transition: 300ms;
@@ -101,8 +95,17 @@ button {
   @apply flex flex-col;
 }
 #ageView p {
-  @apply font-extrabold italic text-5xl md:text-6xl;
+  @apply font-extrabold italic text-5xl md:text-7xl;
 }
 #ageView span {
   @apply text-primary-100 mr-5;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
 }
