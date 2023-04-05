@@ -93,8 +93,11 @@ function collectData(day, month, year) {
   monthValue = currentMonth - month;
   dayValue = currentDay - day;
 
-  if (monthValue < 0) {
+  if (monthValue < 0 || (monthValue === 0 && dayValue < 0)) {
     yearValue--;
+  }
+
+  if (monthValue < 0) {
     monthValue += 12;
   }
 
@@ -103,6 +106,12 @@ function collectData(day, month, year) {
     monthValue--;
     dayValue += prevMonthDays;
   }
+
+  return {
+    years: yearValue,
+    months: monthValue,
+    days: dayValue,
+  };
 }
 
 function showData() {
